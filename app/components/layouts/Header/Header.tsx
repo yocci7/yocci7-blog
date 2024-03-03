@@ -5,43 +5,43 @@ import Link from 'next/link'
 const Header = () => {
   return (
     <>
-      <header className='w-full text-center sticky top-0 z-10'>
-        <div className='flex items-center justify-center bg-main-100 h-14 py-2.5'>
+      <header className='header'>
+        <div className='header__top'>
           <Link href="/">
-            <Image src="/Imgs/logo.png" alt="YOCCI_ii7 BLOG" width={223} height={42} className='relative b-3'/>
+            <Image src="/Imgs/logo.png" alt="YOCCI_ii7 BLOG" width={223} height={42} />
           </Link>
         </div>
 
-        <ul className='text-main-gray m-5'>
-          <li className='inline-block mx-6 text-base font-semibold'>
-            <Link href="/html" className='no-underline'>HTML</Link>
+        <ul className='header__nav'>
+          <li className='header__nav__item'>
+            <Link href="/html">HTML</Link>
             </li>
-          <li className='inline-block mx-6 text-base font-semibold'>
-            <Link href="/css" className='no-underline'>CSS</Link>
+          <li className='header__nav__item'>
+            <Link href="/css">CSS</Link>
             </li>
-          <li className='inline-block mx-6 text-base font-semibold'>
-            <Link href="/js" className='no-underline'>JS</Link>
+          <li className='header__nav__item'>
+            <Link href="/js">JS</Link>
           </li>
-          <li className='inline-block mx-6 text-base font-semibold'>
-            <Link href="/react" className='no-underline'>REACT</Link>
+          <li className='header__nav__item'>
+            <Link href="/react">REACT</Link>
           </li>
-          <li className='inline-block mx-6 text-base font-semibold'>
-            <Link href="/nextjs" className='no-underline'>Next.js</Link>
+          <li className='header__nav__item'>
+            <Link href="/nextjs">NEXT.JS</Link>
           </li>
-          <li className='inline-block mx-6 text-base font-semibold'>
-            <Link href="/tailwind" className='no-underline'>Tailwind</Link>
+          <li className='header__nav__item'>
+            <Link href="/tailwind">TAILWIND</Link>
           </li>
-          <li className='inline-block mx-6 text-base font-semibold'>
-            <Link href="/fullstack" className='no-underline'>FULLSTACK</Link>
+          <li className='header__nav__item'>
+            <Link href="/fullstack">FULLSTACK</Link>
           </li>
-          <li className='inline-block mx-6 text-base font-semibold'>
-            <Link href="/python" className='no-underline'>PYTHON</Link>
+          <li className='header__nav__item'>
+            <Link href="/python">PYTHON</Link>
           </li>
-          <li className='inline-block mx-6 text-base font-semibold'>
-            <Link href="/java" className='no-underline'>JAVA</Link>
+          <li className='header__nav__item'>
+            <Link href="/java">JAVA</Link>
           </li>
-          <li className='inline-block mx-6 text-base font-semibold'>
-            <Link href="/other" className='no-underline'>OTHER</Link>
+          <li className='header__nav__item'>
+            <Link href="/other">OTHER</Link>
           </li>
         </ul>
         </header>

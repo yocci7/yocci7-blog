@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-// import "ress";
+import "@/public/css/app.css";
 import * as layouts from "@/app/components/layouts/Index"
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "YOCCI_ii7 BLOG by Nextjs",
@@ -18,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={inter.className}>
+      <body>
         <layouts.Header />
         <layouts.Sidebar />
         <layouts.Footer />
