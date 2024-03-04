@@ -33,7 +33,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/types/app/fullstack/page.tsx"
-, "server.js", "routes/articleRoutes.js"  ],
+, "server.js", "routes/articleRoutes.js", "app/article/[id]/first/page.mdx"  ],
   "exclude": [
     "node_modules"
   ]

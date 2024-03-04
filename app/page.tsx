@@ -1,9 +1,11 @@
 import Image from "next/image";
+import * as app from "./Index"
+
 
 export default function Home() {
   return (
     <>
-      <h1>TOP Page</h1>
+      <app.Article />
     </>
   );
 }

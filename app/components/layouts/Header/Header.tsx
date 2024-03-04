@@ -23,25 +23,28 @@ const Header = () => {
             <Link href="/js">JS</Link>
           </li>
           <li className='header__nav__item'>
-            <Link href="/react">REACT</Link>
+            <Link href="/react">React</Link>
           </li>
           <li className='header__nav__item'>
-            <Link href="/nextjs">NEXT.JS</Link>
+            <Link href="/nextjs">Next.js</Link>
           </li>
           <li className='header__nav__item'>
-            <Link href="/tailwind">TAILWIND</Link>
+            <Link href="/tailwind">Tailwind</Link>
           </li>
           <li className='header__nav__item'>
-            <Link href="/fullstack">FULLSTACK</Link>
+            <Link href="/fullstack">FullStack</Link>
           </li>
           <li className='header__nav__item'>
-            <Link href="/python">PYTHON</Link>
+            <Link href="/python">Python</Link>
           </li>
           <li className='header__nav__item'>
-            <Link href="/java">JAVA</Link>
+            <Link href="/java">Java</Link>
           </li>
           <li className='header__nav__item'>
-            <Link href="/other">OTHER</Link>
+            <Link href="/optc">OPTC</Link>
+          </li>
+          <li className='header__nav__item'>
+            <Link href="/other">Other</Link>
           </li>
         </ul>
         </header>

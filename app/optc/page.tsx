@@ -30,7 +30,7 @@ export default async function Article() {
       // 記事を最新日付順にソート
       .sort((a, b) => new Date(b.frontmatter.dataPublished as string).getTime() - new Date(a.frontmatter.dataPublished as string).getTime())
       // 記事をタグでフィルタ
-      .filter((post) => post.frontmatter.tag === 'Tailwind')
+      .filter((post) => post.frontmatter.tag === 'OPTC')
   );
 
   return (
