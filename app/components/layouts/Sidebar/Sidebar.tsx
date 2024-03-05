@@ -27,7 +27,13 @@ export default async function Sidebar() {
       };
     })
   ).then((posts) =>
+    // 最新順に記事をソート
     posts
+      .sort((a, b) => {
+        const dateA: Date = new Date(a.frontmatter.datePublished);
+        const dateB: Date = new Date(b.frontmatter.datePublished);
+        return dateB.getTime() - dateA.getTime();
+      })
       .slice(0, 3) // 最新の3つの記事を取得
   );
 
@@ -60,10 +66,15 @@ export default async function Sidebar() {
                     // priority=""
                   />
                   <div className="recentArticle__item__section__text">
-                    <h4 className="recentArticle__item__section__text__headline">{post.frontmatter.headline}</h4>
+                    <h4 className="recentArticle__item__section__text__headline">
+                    {post.frontmatter.headline.length > 21
+                        ? `${post.frontmatter.headline.slice(0, 21)}...`
+                        : post.frontmatter.headline
+                    }
+                    </h4>
                     <p className="recentArticle__item__section__text__description">
-                      {post.frontmatter.description.length > 21
-                        ? `${post.frontmatter.description.slice(0, 21)}...`
+                      {post.frontmatter.description.length > 23
+                        ? `${post.frontmatter.description.slice(0, 23)}...`
                         : post.frontmatter.description
                       }
                     </p>

@@ -45,16 +45,16 @@
       }
     }
   }
+
   .recentArticle {
     margin-top: 10px;
     position: fixed;
     top:  200px;
     width: 296px;
-    height: 355px;
+    height: 360px;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 5px 5px 15px #00000080;
-    border-radius: 25px;
     transition: all 0.3s;
 
     &__title {
@@ -66,38 +66,15 @@
       letter-spacing: 1px;
       border-radius: 20px 20px 0  0;
       width: 296px;
-
-      & .fa-thumbtack {
-        width: 20px;
-        height: 20px;
-      }
     }
-  }
 
-  .recentArticle {
-    margin-top: 10px;
-    position: fixed;
-    top:  200px;
-    width: 296px;
-    height: 355px;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 5px 5px 15px #00000080;
-    transition: all 0.3s;
-
-    &__title {
-      background-color: #ecdcb2;
-      color: #c29523;
-      font-size: 25px;
-      padding: 10px;
-      text-align: center;
-      letter-spacing: 1px;
-      border-radius: 20px 20px 0  0;
-      width: 296px;
+    & .fa-thumbtack {
+      width: 20px;
+      height: 20px;
     }
 
     &__item {
-      margin: 10px 5%;
+      margin: 10px 2% 10px 5%;
       padding: 10px;
       background-color: #fff;
 
@@ -130,18 +107,19 @@
 
         &__text {
         transition: all .5s;
+        margin-left: 15px;
+        width: 170px;
 
           &__headline {
             text-align: center;
             color: #000;
-            font-size: 18px;
-            white-space: nowrap;
+            font-size: 15px;
           }
 
           &__description {
             text-align: center;
             color: #000;
-            font-size: 14px;
+            font-size: 12px;
             white-space: break-word;
             margin: 10px;
           }

@@ -56,6 +56,24 @@
   }
 
   .Contect {
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 40px;
+      position:relative;
+      margin-bottom: 15px;
+
+      &::after{
+        content: "";
+        display: block;
+        width: 75%;
+        height: 2px;
+        background-color: #444;
+        position: absolute;
+        bottom: -5px;
+     }
+    }
+
     h2 {
       font-size: 26px;
       font-weight: 600;
@@ -118,8 +136,21 @@
       background-color: #1d2020;
       width: 50%;
       border-radius: 8px;
-      padding: 8px 16px;
+      padding: 10px 16px 0;
       margin: 10px 0;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      &::-webkit-scrollbar {
+        background: #1d2020;
+        width: auto;
+        height: 10px;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #444;
+        border-radius: 10px;
+      }
+
       code {
         font-size: 14px;
         line-height: 21px;

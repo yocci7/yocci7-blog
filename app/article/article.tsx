@@ -25,7 +25,7 @@ export default async function Article() {
         frontmatter: data, // フロントマターのデータ
       };
     })
-  ).then((posts) =>
+    ).then((posts) =>
     posts
       // 記事を最新日付順にソート
       .sort((a, b) => new Date(b.frontmatter.datePublished as string).getTime() - new Date(a.frontmatter.datePublished as string).getTime())
@@ -47,10 +47,15 @@ export default async function Article() {
                 />
                 <p className="article__item__section__tag">{post.frontmatter.tag}</p>
                 <div className="article__item__section__text">
-                  <p className="article__item__section__text__headline">{post.frontmatter.headline}</p>
+                  <p className="article__item__section__text__headline">
+                    {post.frontmatter.headline.length > 31
+                      ? `${post.frontmatter.headline.slice(0, 31)}...`
+                      : post.frontmatter.headline
+                    }
+                  </p>
                   <p className="article__item__section__text__description">
-                    {post.frontmatter.description.length > 31
-                      ? `${post.frontmatter.description.slice(0, 31)}...`
+                    {post.frontmatter.description.length > 39
+                      ? `${post.frontmatter.description.slice(0, 39)}...`
                       : post.frontmatter.description
                     }
                   </p>
