@@ -6,7 +6,7 @@ import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkHtml from 'remark-html';
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
 
 // ブログ記事ページ
 export default async function BlogPost({ params }: { params: { slug: string } }) {
@@ -28,7 +28,22 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   return (
     <>
       <h1>{headline}</h1>
+      <h1></h1>
       <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
     </>
   );
+}
+
+// generateStaticPathsを定義
+export async function generateStaticParams() {
+  const postsDirectory = path.join(process.cwd(), 'content');
+  const fileNames = fs.readdirSync(postsDirectory);
+
+  const paths = fileNames.map((fileName) => ({
+    params: {
+      slug: fileName.replace('.md', ''),
+    },
+  }));
+
+  return paths;
 }

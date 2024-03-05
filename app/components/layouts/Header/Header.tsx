@@ -8,7 +8,13 @@ const Header = () => {
       <header className='header'>
         <div className='header__top'>
           <Link href="/">
-            <Image src="/Imgs/logo.png" alt="YOCCI_ii7 BLOG" width={223} height={42} />
+            <Image
+              src="/Imgs/logo.png"
+              width={223}
+              height={42}
+              alt="YOCCI_ii7 BLOG"
+              property='eager'
+            />
           </Link>
         </div>
 

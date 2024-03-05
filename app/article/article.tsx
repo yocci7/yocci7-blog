@@ -6,7 +6,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import "@/public/css/Article.css";
 
-export default async function Article() {
+
+async function Article() {
   // ディレクトリとファイル名を取得
   const postsDirectory = path.join(process.cwd(), 'content');
   // ディレクトリ内の全てのファイル名を取得
@@ -41,8 +42,8 @@ export default async function Article() {
                 src={post.frontmatter.img}
                 width={256}
                 height={144}
-                className='article__item__section__img'
                 alt='No Image'
+                className='article__item__section__img'
               />
               <p className="article__item__section__tag">{post.frontmatter.tag}</p>
               <div className="article__item__section__text">
@@ -62,3 +63,5 @@ export default async function Article() {
     </div>
   );
 }
+
+export default Article

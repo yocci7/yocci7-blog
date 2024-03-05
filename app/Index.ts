@@ -1,4 +1,4 @@
-import Article from "./article/page";
+import Article from "./article/article";
 import Html from "./html/page";
 import Css from "./css/page";
 import Js from "./js/page";
