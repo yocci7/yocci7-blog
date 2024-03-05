@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import "@/public/css/Article.css";
 
-export default async function Article() {
+export default async function Other() {
   // ディレクトリとファイル名を取得
   const postsDirectory = path.join(process.cwd(), 'content');
   // ディレクトリ内の全てのファイル名を取得
@@ -28,34 +28,44 @@ export default async function Article() {
   ).then((posts) =>
     posts
       // 記事を最新日付順にソート
-      .sort((a, b) => new Date(b.frontmatter.dataPublished as string).getTime() - new Date(a.frontmatter.dataPublished as string).getTime())
+      .sort((a, b) => new Date(b.frontmatter.datePublished as string).getTime() - new Date(a.frontmatter.datePublished as string).getTime())
       // 記事をタグでフィルタ
       .filter((post) => post.frontmatter.tag === 'Other')
   );
 
   return (
-    <div className='article'>
-      {posts.map((post) => (
-        <article key={post.slug} className='article__item'>
-          <Link href={`/article/${post.slug}`}>
-            <section className='article__item__section'>
-              <Image
-                src={post.frontmatter.img}
-                width={256}
-                height={144}
-                className='article__item__section__img'
-                alt='No Image'
-              />
-              <p className="article__item__section__tag">{post.frontmatter.tag}</p>
-              <div className="article__item__section__text">
-                <h4 className="article__item__section__text__headline">{post.frontmatter.headline}</h4>
-                <p className="article__item__section__text__description">{post.frontmatter.description}</p>
-                <p className="article__item__section__text__dataPublished">{post.frontmatter.dataPublished}</p>
-              </div>
-            </section>
-          </Link>
-        </article>
+    <>
+      <div className='article'>
+        {posts.map((post) => (
+          <article key={post.slug} className='article__item'>
+            <Link href={`/article/${post.slug}`}>
+              <section className='article__item__section'>
+                <Image
+                  src={post.frontmatter.img}
+                  width={256}
+                  height={144}
+                  className='article__item__section__img'
+                  alt='No Image'
+                />
+                <p className="article__item__section__tag">{post.frontmatter.tag}</p>
+                <div className="article__item__section__text">
+                  <p className="article__item__section__text__headline">{post.frontmatter.headline}</p>
+                  <p className="article__item__section__text__description">
+                    {post.frontmatter.description.length > 31
+                      ? `${post.frontmatter.description.slice(0, 31)}...`
+                      : post.frontmatter.description
+                    }
+                  </p>
+                  <div className='article__item__section__text__date'>
+                    <p className="article__item__section__text__date__Published">{post.frontmatter.datePublished}</p>
+                    <p className="article__item__section__text__date__Updated">{post.frontmatter.dateUpdated}</p>
+                  </div>
+                </div>
+              </section>
+            </Link>
+          </article>
       ))}
     </div>
+    </>
   );
 }

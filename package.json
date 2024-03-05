@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write article.tsx"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -26,6 +27,10 @@
     "remark-slug": "^7.0.1"
   },
   "devDependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.1.2",
+    "@types/mdx": "^2.0.11",
     "@types/node": "^20",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",

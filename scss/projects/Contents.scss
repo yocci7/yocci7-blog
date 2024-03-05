@@ -1,0 +1,138 @@
+.main {
+  width: 80%;
+  transform: translate(10%, 0%);
+
+  .Title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    position:relative;
+
+    &::after{
+      content: "";
+      display: block;
+      width: 75%;
+      height: 2px;
+      background-color: #444;
+      position: absolute;
+      bottom: -5px;
+   }
+  }
+
+  .Date {
+    display: flex;
+    font-size: 14px;
+    margin-top: 10px;
+
+    &__Published {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 25px;
+      margin-right: 10px;
+
+      &::before {
+        content: "投稿日 : ";
+      }
+    }
+
+    &__Updated {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 25px;
+      margin-left: 10px;
+
+      &::before {
+        content: "更新日 : ";
+      }
+    }
+  }
+
+  .Description {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 29px;
+    width: 65%;
+    margin: 20px 0;
+  }
+
+  .Contect {
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 36px;
+      position: relative;
+      margin-bottom: 15px;
+
+      &::after{
+        content: "";
+        display: block;
+        width: 50%;
+        height: 1px;
+        background-color: #505050;
+        position: absolute;
+        bottom: 0px;
+     }
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
+
+    h5 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16px;
+      margin-bottom: 10px 0;
+    }
+
+    code {
+      font-family: "Roboto", Arial, sans-serif;
+      color: #fff;
+    }
+
+    pre {
+      background-color: #1d2020;
+      width: 50%;
+      border-radius: 8px;
+      padding: 8px 16px;
+      margin: 10px 0;
+      code {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+    p {
+      code {
+        background-color: #1d2020;
+        border-radius: 8px;
+        padding: 8px 8px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+}

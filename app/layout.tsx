@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/public/css/app.css";
-import * as layouts from "@/app/components/Index"
+import * as layouts from "@/app/components/layouts/Index"
 
 export const metadata: Metadata = {
   title: "YOCCI_ii7 BLOG by Nextjs",

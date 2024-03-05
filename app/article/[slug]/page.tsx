@@ -5,8 +5,7 @@ import matter from 'gray-matter';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkHtml from 'remark-html';
-import Link from 'next/link';
-import Image from 'next/image';
+import "@/public/css/Contents.css"
 
 // ブログ記事ページ
 export default async function BlogPost({ params }: { params: { slug: string } }) {
@@ -21,15 +20,22 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   const img = data.img; // 記事の画像
   const tag = data.tag; // 記事のタグ
   const description = data.description; // 記事の説明
-  const dataPublished = data.dataPublished; // 記事の投稿日
+  const Published = data.datePublished; // 記事の更新日
+  const Updated = data.dateUpdated; // 記事の投稿日
   const processedContent = await unified().use(remarkParse).use(remarkHtml).process(content);
   const contentHtml = processedContent.toString(); // 記事の本文をHTMLに変換
 
   return (
     <>
-      <h1>{headline}</h1>
-      <h1></h1>
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
+      <h1 className='Title'>{headline}
+      </h1>
+      <div className='Date'>
+        <p className='Date__Published'>{Published}</p>
+        <p className='Date__Updated'>{Updated}</p>
+      </div>
+      <p className='Description'>{description}
+      </p>
+      <div className='Contect' dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
     </>
   );
 }

@@ -9,6 +9,7 @@ body {
   height: 100vh;
   font-family: "Roboto", Arial, sans-serif;
   background-color: #fff;
+  overflow-x: clip;
 
   display: grid;
   grid-template:
@@ -48,4 +49,3 @@ body {
 .footer {
   grid-area: footer;
 }
-
