@@ -21,7 +21,7 @@ export default async function Article() {
 
       // 各記事の情報をオブジェクトとして返す
       return {
-        slug: fileName.replace('.mdx', ''), // ファイル名から拡張子を削除してslugとして使用
+        slug: fileName.replace('.md', ''), // ファイル名から拡張子を削除してslugとして使用
         frontmatter: data, // フロントマターのデータ
       };
     })

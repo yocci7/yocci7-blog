@@ -11,7 +11,7 @@ import "@/public/css/Content.css"
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   // URLのパラメータから該当するファイル名を取得
   const { slug } = params;
-  const filePath = path.join(process.cwd(), 'content', `${slug}.mdx`);
+  const filePath = path.join(process.cwd(), 'content', `${slug}.md`);
 
   // ファイルの中身を取得
   const fileContents = fs.readFileSync(filePath, 'utf8');
@@ -47,7 +47,7 @@ export async function generateStaticParams() {
 
   const paths = fileNames.map((fileName) => ({
     params: {
-      slug: fileName.replace('.mdx', ''),
+      slug: fileName.replace('.md', ''),
     },
   }));
 
