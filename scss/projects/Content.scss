@@ -7,11 +7,12 @@
     font-weight: 700;
     line-height: 40px;
     position:relative;
+    width: 75%;
 
     &::after{
       content: "";
       display: block;
-      width: 75%;
+      width: 850px;
       height: 2px;
       background-color: #444;
       position: absolute;
@@ -66,7 +67,7 @@
       &::after{
         content: "";
         display: block;
-        width: 75%;
+        width: 850px;
         height: 2px;
         background-color: #444;
         position: absolute;
@@ -80,11 +81,12 @@
       line-height: 36px;
       margin-bottom: 15px;
       position: relative;
+      width: 50%;
 
       &::after{
         content: "";
         display: block;
-        width: 50%;
+        width: 100%;
         height: 1px;
         background-color: #505050;
         position: absolute;
@@ -101,14 +103,14 @@
 
     h4 {
       font-size: 22px;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 28px;
       margin-bottom: 10px;
     }
 
     h5 {
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 24px;
       margin-bottom: 10px;
     }
@@ -133,6 +135,7 @@
     }
 
     pre {
+      position: relative;
       background-color: #1d2020;
       width: 50%;
       border-radius: 8px;
@@ -154,6 +157,28 @@
       code {
         font-size: 14px;
         line-height: 21px;
+      }
+
+      [class^="language-"]::after {
+        content: '';
+        min-width: 50px;
+        padding: 5px;
+        background-color: #444;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        border-radius: 0 0 10px 10px;
+        color: #fff;
+        text-align: center;
+      }
+      [class^="language-html"]::after {
+        content: 'HTML';
+      }
+      [class^="language-css"]::after {
+        content: 'CSS';
+      }
+      [class^="language-js"]::after {
+        content: 'JavaScript';
       }
     }
 

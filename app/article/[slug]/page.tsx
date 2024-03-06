@@ -5,13 +5,13 @@ import matter from 'gray-matter';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkHtml from 'remark-html';
-import "@/public/css/Contents.css"
+import "@/public/css/Content.css"
 
 // ブログ記事ページ
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   // URLのパラメータから該当するファイル名を取得
   const { slug } = params;
-  const filePath = path.join(process.cwd(), 'content', `${slug}.md`);
+  const filePath = path.join(process.cwd(), 'content', `${slug}.mdx`);
 
   // ファイルの中身を取得
   const fileContents = fs.readFileSync(filePath, 'utf8');
@@ -47,7 +47,7 @@ export async function generateStaticParams() {
 
   const paths = fileNames.map((fileName) => ({
     params: {
-      slug: fileName.replace('.md', ''),
+      slug: fileName.replace('.mdx', ''),
     },
   }));
 
