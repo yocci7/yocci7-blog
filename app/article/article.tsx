@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import Image from 'next/image';
 import "@/public/css/Article.css";
+import CustomHead from '../components/layouts/Head/Head';
 
 export default async function Article() {
   // ディレクトリとファイル名を取得

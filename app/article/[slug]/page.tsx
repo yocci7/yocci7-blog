@@ -5,10 +5,10 @@ import matter from 'gray-matter';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkHtml from 'remark-html';
-import "@/public/css/Content.css"
+import "@/public/css/Content.css";
 
 // ブログ記事ページ
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+export default async function ArticlePost({ params }: { params: { slug: string } }) {
   // URLのパラメータから該当するファイル名を取得
   const { slug } = params;
   const filePath = path.join(process.cwd(), 'content', `${slug}.md`);
@@ -27,14 +27,17 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
   return (
     <>
+    <head>
+      <title>{headline}</title>
+      <meta name="description" content={description} />
+    </head>
       <div className='Contents'>
         <h1 className='Title'>{headline}</h1>
         <div className='Date'>
           <p className='Date__Published'>{Published}</p>
           <p className='Date__Updated'>{Updated}</p>
         </div>
-        <p className='Description'>{description}
-        </p>
+        <p className='Description'>{description}</p>
         <div className='Contect' dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
       </div>
     </>
