@@ -27,15 +27,16 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
   return (
     <>
-      <h1 className='Title'>{headline}
-      </h1>
-      <div className='Date'>
-        <p className='Date__Published'>{Published}</p>
-        <p className='Date__Updated'>{Updated}</p>
+      <div className='Contents'>
+        <h1 className='Title'>{headline}</h1>
+        <div className='Date'>
+          <p className='Date__Published'>{Published}</p>
+          <p className='Date__Updated'>{Updated}</p>
+        </div>
+        <p className='Description'>{description}
+        </p>
+        <div className='Contect' dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
       </div>
-      <p className='Description'>{description}
-      </p>
-      <div className='Contect' dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
     </>
   );
 }

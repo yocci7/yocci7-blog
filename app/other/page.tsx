@@ -35,42 +35,44 @@ export default async function Other() {
 
   return (
     <>
-      <div className='article'>
-        {posts.map((post) => (
-          <article key={post.slug} className='article__item'>
-            <Link href={`/article/${post.slug}`}>
-              <section className='article__item__section'>
-                <Image
-                  src={post.frontmatter.img}
-                  width={256}
-                  height={144}
-                  className='article__item__section__img'
-                  alt='No Image'
-                />
-                <p className="article__item__section__tag">{post.frontmatter.tag}</p>
-                <div className="article__item__section__text">
-                  <p className="article__item__section__text__headline">
-                    {post.frontmatter.headline.length > 31
-                      ? `${post.frontmatter.headline.slice(0, 31)}...`
-                      : post.frontmatter.headline
-                    }
-                  </p>
-                  <p className="article__item__section__text__description">
-                    {post.frontmatter.description.length > 39
-                      ? `${post.frontmatter.description.slice(0, 39)}...`
-                      : post.frontmatter.description
-                    }
-                  </p>
-                  <div className='article__item__section__text__date'>
-                    <p className="article__item__section__text__date__Published">{post.frontmatter.datePublished}</p>
-                    <p className="article__item__section__text__date__Updated">{post.frontmatter.dateUpdated}</p>
+      <div className="summary">
+        <div className='summary__article'>
+          {posts.map((post) => (
+            <article key={post.slug} className='summary__article__item'>
+              <Link href={`/article/${post.slug}`}>
+                <section className='summary__article__item__section'>
+                  <Image
+                    src={post.frontmatter.img}
+                    width={1920}
+                    height={1080}
+                    className='summary__article__item__section__img'
+                    alt='No Image'
+                  />
+                  <p className="summary__article__item__section__tag">{post.frontmatter.tag}</p>
+                  <div className="summary__article__item__section__text">
+                    <p className="summary__article__item__section__text__headline">
+                      {post.frontmatter.headline.length > 31
+                        ? `${post.frontmatter.headline.slice(0, 31)}...`
+                        : post.frontmatter.headline
+                      }
+                    </p>
+                    <p className="summary__article__item__section__text__description">
+                      {post.frontmatter.description.length > 39
+                        ? `${post.frontmatter.description.slice(0, 39)}...`
+                        : post.frontmatter.description
+                      }
+                    </p>
+                    <div className='summary__article__item__section__text__date'>
+                      <p className="summary__article__item__section__text__date__Published">{post.frontmatter.datePublished}</p>
+                      <p className="summary__article__item__section__text__date__Updated">{post.frontmatter.dateUpdated}</p>
+                    </div>
                   </div>
-                </div>
-              </section>
-            </Link>
-          </article>
-      ))}
-    </div>
+                </section>
+              </Link>
+            </article>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

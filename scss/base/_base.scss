@@ -13,37 +13,32 @@ body {
 
   display: grid;
   grid-template:
-  "  header  header  header  header  header " 112px
-  "   ....   ......  ......  ......   ....  " 10px
-  "   ....   sidebar ......   main    ....  " 1fr
-  "   ....   ......  ......  ......   ....  " 10px
-  "  footer  footer  footer  footer  footer " 100px
-  /    2.5%   350px   20px     1fr     2.5%
+  "  header   header  header  " 112px
+  "  ......  .......  ......  " 10px
+  "  ......  sidebar   main   " 1fr
+  "  ......  .......  ......  " 10px
+  "  footer   footer  footer  " 100px
+  /    3%   350px     1fr
   ;
+}
 
+.header {
+  font-family: Montserrat, sans-serif, Arial;
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
   transform-origin: top center;
   animation: loading 1s;
   @keyframes loading {
     0% {opacity: 0;transform: scale(0.95);}
     100% {opacity: 1;transform: scale(1);}
   }
-}
-
-.header {
-  font-family: Montserrat,sans-serif, Arial;
-  grid-area: header;
-  // background-color: #51ff00;
-}
-
-.sidebar {
-  grid-area: sidebar;
-  // background-color: #00ffff;
-}
-
-.main {
-  grid-area: main;
-  // background-color: #ffac30;
-
 }
 
 .footer {

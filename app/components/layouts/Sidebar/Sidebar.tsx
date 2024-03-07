@@ -67,8 +67,8 @@ export default async function Sidebar() {
                   />
                   <div className="recentArticle__item__section__text">
                     <h4 className="recentArticle__item__section__text__headline">
-                    {post.frontmatter.headline.length > 21
-                        ? `${post.frontmatter.headline.slice(0, 21)}...`
+                    {post.frontmatter.headline.length > 20
+                        ? `${post.frontmatter.headline.slice(0, 20)}...`
                         : post.frontmatter.headline
                     }
                     </h4>
