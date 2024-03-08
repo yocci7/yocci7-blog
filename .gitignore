@@ -1,5 +1,3 @@
-# .gitignore
-
 # Node.js
 node_modules/
 
@@ -40,5 +38,11 @@ tailwind/
 Img/
 public/Imgs/
 
-# Ignore CSS source maps
-*.css.map
+# Vercel specific
+.vercel/
+
+# Ignore build output
+/.vercel
+
+# Ignore Vercel environment variable configuration
+.vercel.env
