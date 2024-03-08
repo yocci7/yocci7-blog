@@ -39,3 +39,6 @@ tailwind/
 # Ignore source images or other development-specific assets
 Img/
 public/Imgs/
+
+# Ignore CSS source maps
+*.css.map
