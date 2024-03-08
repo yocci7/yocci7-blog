@@ -1,48 +1,46 @@
-# Node.js
-node_modules/
+# Node.js dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
 
-# Next.js
-.next/
-out/
+# Test coverage
+/coverage
 
-# Compiled files
-*.log
-*.tsbuildinfo
+# Next.js build output
+/.next/
+/out/
 
-# VSCode
-.vscode/
+# Custom build output
+/build
+
+# macOS system files
+.DS_Store
+
+# SSL private key files
+*.pem
+
+# npm/yarn log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Environment variables
-.env.local
-.env.development.local
-.env.test.local
-
-# Optional: Ignore the build cache in case you are using yarn
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-
-# Ignore development-related files and directories
-app/
-lib/
-java/
-js/
-react/
-fullstack/
-html/
-python/
-scss/
-tailwind/
-
-# Ignore source images or other development-specific assets
-Img/
-public/Imgs/
+.env*.local
+.env
 
 # Vercel specific
-.vercel/
+.vercel
 
-# Ignore build output
-/.vercel
+# TypeScript build artifacts
+*.tsbuildinfo
+next-env.d.ts
 
-# Ignore Vercel environment variable configuration
-.vercel.env
+# Editor configuration
+.editorconfig
+
+# CSS source maps
+*.css.map
+
+# Application-specific images
+app/Img
