@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkHtml from 'remark-html';
-import "@/public/css/Content.css";
+import "@/public/Styles/Content.css";
 
 // ブログ記事ページ
 export default async function ArticlePost({ params }: { params: { slug: string } }) {
@@ -27,10 +27,6 @@ export default async function ArticlePost({ params }: { params: { slug: string }
 
   return (
     <>
-      <head>
-        <title>{data.headline}</title>
-        <meta name="description" content={data.description} />
-      </head>
       <div className='Contents'>
         <h1 className='Title'>{headline}</h1>
         <div className='Date'>
