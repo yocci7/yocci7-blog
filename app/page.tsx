@@ -4,7 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import Image from 'next/image';
-import "@/public/css/Article.css";
+import "@/public/Styles/Article.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -51,6 +51,7 @@ export default async function Article() {
                     height={1080}
                     className='summary__article__item__section__img'
                     alt='No Image'
+                    priority
                   />
                   <p className="summary__article__item__section__tag">{post.frontmatter.tag}</p>
                   <div className="summary__article__item__section__text">

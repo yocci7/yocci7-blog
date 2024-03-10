@@ -5,7 +5,7 @@
         {
            "format": "compressed",
            "extensionName": ".css",
-           "savePath": "/public/css"
+           "savePath": "/public/Styles"
         },
     ]
 }

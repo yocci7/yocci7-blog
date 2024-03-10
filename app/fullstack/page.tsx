@@ -4,7 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import Image from 'next/image';
-import "@/public/css/Article.css";
+import "@/public/Styles/Article.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

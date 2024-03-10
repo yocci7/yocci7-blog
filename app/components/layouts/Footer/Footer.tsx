@@ -12,7 +12,7 @@ const Footer = () => {
           HOME
         </Link>
         <nav className='footer__nav'>
-          <Link href="/" className='footer__nav__contact'>お問い合わせ</Link>
+          <Link href="/contact" className='footer__nav__contact'>お問い合わせ</Link>
           <Link href="/" className='footer__nav__site'>サイトについて</Link>
         </nav>
         <Link href="https://opensource.org/license/mit" className='footer__licence'>© 2024 Yocci_ii7</Link>

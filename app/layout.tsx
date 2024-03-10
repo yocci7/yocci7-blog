@@ -1,4 +1,4 @@
-import "@/public/css/app.css";
+import "@/public/Styles/app.css";
 import * as layouts from "@/app/components/layouts/Index"
 
 export default function RootLayout({
@@ -8,9 +8,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-        <head>
-        <layouts.IndexHead />
-      </head>
       <body>
         <layouts.Header />
         <layouts.Sidebar />
