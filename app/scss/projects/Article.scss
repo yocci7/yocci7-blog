@@ -86,9 +86,9 @@
           top: 2.5%;
           right: 5%;
           color: #fff;
-          font-size: 15px;
+          font-size: 13px;
           font-weight: bold;
-          background-color: #444;
+          background-color: #555;
           border-radius: 20px;
           padding: 8px 10px;
 
@@ -97,7 +97,7 @@
           }
 
           @include mq(xxl) {
-            font-size: 15px;
+            font-size: 13px;
           }
         }
 

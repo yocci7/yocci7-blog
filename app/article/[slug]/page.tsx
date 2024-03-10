@@ -6,6 +6,27 @@ import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkHtml from 'remark-html';
 import "@/public/Styles/Content.css";
+import { Metadata } from 'next';
+import { generateMetadataForArticle } from '@/app/components/elements/ArticleHead/ArticleHead';
+
+// generateStaticPathsを定義
+export async function generateStaticParams() {
+  const postsDirectory = path.join(process.cwd(), 'content');
+  const fileNames = fs.readdirSync(postsDirectory);
+
+  const paths = fileNames.map((fileName) => ({
+    params: {
+      slug: fileName.replace('.md', ''),
+    },
+  }));
+
+  return paths;
+}
+
+// ページごとのメタデータを動的に生成する関数
+export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
+  return generateMetadataForArticle({ params });
+};
 
 // ブログ記事ページ
 export default async function ArticlePost({ params }: { params: { slug: string } }) {
@@ -17,8 +38,6 @@ export default async function ArticlePost({ params }: { params: { slug: string }
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
   const headline = data.headline; // 記事のタイトル
-  const img = data.img; // 記事の画像
-  const tag = data.tag; // 記事のタグ
   const description = data.description; // 記事の説明
   const Published = data.datePublished; // 記事の更新日
   const Updated = data.dateUpdated; // 記事の投稿日
@@ -38,18 +57,4 @@ export default async function ArticlePost({ params }: { params: { slug: string }
       </div>
     </>
   );
-}
-
-// generateStaticPathsを定義
-export async function generateStaticParams() {
-  const postsDirectory = path.join(process.cwd(), 'content');
-  const fileNames = fs.readdirSync(postsDirectory);
-
-  const paths = fileNames.map((fileName) => ({
-    params: {
-      slug: fileName.replace('.md', ''),
-    },
-  }));
-
-  return paths;
 }

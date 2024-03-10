@@ -42,9 +42,6 @@ export default async function Sidebar() {
       <div className="sidebar">
         <div className="sidebar__search">
           <input type="text" placeholder="Search" className="sidebar__search__input" />
-          <div className="sidebar__search__button">
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </div>
         </div>
 
         <div className="recentArticle">
