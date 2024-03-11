@@ -46,7 +46,7 @@ export default async function Sidebar() {
 
         <div className="recentArticle">
           <h4 className="recentArticle__title">
-            <FontAwesomeIcon icon={faThumbtack} />
+            <FontAwesomeIcon icon={faThumbtack}　width={15} height={20} />
             Recent Article
           </h4>
 
