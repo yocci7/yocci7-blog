@@ -49,22 +49,22 @@ export default async function Article() {
                 <section className='summary__article__item__section'>
                   <Image
                     src={post.frontmatter.img}
-                    width={1920}
-                    height={1080}
+                    width={384}
+                    height={216}
                     className='summary__article__item__section__img'
                     alt='No Image'
                   />
                   <p className="summary__article__item__section__tag">{post.frontmatter.tag}</p>
                   <div className="summary__article__item__section__text">
-                  <p className="summary__article__item__section__text__headline">
-                      {post.frontmatter.headline.length > 38
-                        ? `${post.frontmatter.headline.slice(0, 38)}...`
+                    <p className="summary__article__item__section__text__headline">
+                      {post.frontmatter.headline.length > 31
+                        ? `${post.frontmatter.headline.slice(0, 31)}...`
                         : post.frontmatter.headline
                       }
                     </p>
                     <p className="summary__article__item__section__text__description">
-                      {post.frontmatter.description.length > 50
-                        ? `${post.frontmatter.description.slice(0, 50)}...`
+                      {post.frontmatter.description.length > 39
+                        ? `${post.frontmatter.description.slice(0, 39)}...`
                         : post.frontmatter.description
                       }
                     </p>

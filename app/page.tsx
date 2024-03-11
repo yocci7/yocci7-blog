@@ -47,8 +47,8 @@ export default async function Article() {
                 <section className='summary__article__item__section'>
                   <Image
                     src={post.frontmatter.img}
-                    width={1920}
-                    height={1080}
+                    width={384}
+                    height={216}
                     className='summary__article__item__section__img'
                     alt='No Image'
                     priority
