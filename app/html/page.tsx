@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "HTML | YOCCI_ii7 BLOG",
-  description: "プログラミング初心者の主が学習したプログラミング知識などを記事にまとめているサイトです。",
+  description: "プログラミング初心者が学習した知識などを記事にまとめているサイトです。",
 };
 
 export default async function Article() {

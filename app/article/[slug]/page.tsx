@@ -9,6 +9,11 @@ import "@/public/Styles/Content.css";
 import { Metadata } from 'next';
 import { generateMetadataForArticle } from '@/app/components/elements/ArticleHead/ArticleHead';
 
+// ページごとのメタデータを動的に生成する関数
+export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
+  return generateMetadataForArticle({ params });
+};
+
 // generateStaticPathsを定義
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), 'content');
@@ -22,11 +27,6 @@ export async function generateStaticParams() {
 
   return paths;
 }
-
-// ページごとのメタデータを動的に生成する関数
-export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
-  return generateMetadataForArticle({ params });
-};
 
 // ブログ記事ページ
 export default async function ArticlePost({ params }: { params: { slug: string } }) {
