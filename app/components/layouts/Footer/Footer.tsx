@@ -13,9 +13,9 @@ const Footer = () => {
         </Link>
         <nav className='footer__nav'>
           <Link href="/contact" className='footer__nav__contact'>お問い合わせ</Link>
-          <Link href="/" className='footer__nav__site'>サイトについて</Link>
+          <Link href="/about" className='footer__nav__site'>サイトについて</Link>
         </nav>
-        <Link href="https://opensource.org/license/mit" className='footer__licence'>© 2024 Yocci_ii7</Link>
+        <p className='footer__licence'>© 2024 Yocci_ii7/よっしー</p>
       </footer>
     </>
   )

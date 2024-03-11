@@ -64,17 +64,11 @@ export default async function Sidebar() {
                   />
                   <div className="recentArticle__item__section__text">
                     <h4 className="recentArticle__item__section__text__headline">
-                    {post.frontmatter.headline.length > 20
-                        ? `${post.frontmatter.headline.slice(0, 20)}...`
+                    {post.frontmatter.headline.length > 47
+                        ? `${post.frontmatter.headline.slice(0, 47)}...`
                         : post.frontmatter.headline
                     }
                     </h4>
-                    <p className="recentArticle__item__section__text__description">
-                      {post.frontmatter.description.length > 23
-                        ? `${post.frontmatter.description.slice(0, 23)}...`
-                        : post.frontmatter.description
-                      }
-                    </p>
                   </div>
                 </section>
               </Link>

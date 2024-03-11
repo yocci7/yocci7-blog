@@ -20,7 +20,6 @@ const IndexHead = () => {
       <meta property="og:site_name" content="サイト名" />
       <meta property="og:locale" content="ja_JP" />
       <link rel="canonical" href="正規化するURL" /> */}
-
     </>
   )
 }
