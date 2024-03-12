@@ -95,7 +95,12 @@
         width: 170px;
 
           &__headline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            width: 170px;
+            height: 70px;
             color: #000;
             font-size: 14px;
             line-height: 18px;

@@ -1,7 +1,6 @@
 @use "../var/var" as *;
 @use "../var/mixin" as *;
 .summary {
-  margin-top: 20px;
   &__article {
     flex: 1 1 70%;
     display: flex;

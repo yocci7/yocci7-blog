@@ -245,5 +245,56 @@
     img {
       box-shadow: 0px 0px 10px #00000080;
     }
+
+    blockquote p {
+      width: 55%;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
+      margin: 20px 0;
+      color: #666;
+      font-style: italic;
+      position: relative;
+
+      &::before{
+        content: "";
+        display: block;
+        width: 2px;
+        height: 100%;
+        left: -8px;
+        top: 0px;
+        background-color: #666;
+        position: absolute;
+        bottom: 0px;
+      }
+    }
+
+    ul {
+      width: 55%;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      margin: 20px 0;
+      position: relative;
+      left: 20px;
+
+      li ul {
+        margin: 0;
+      }
+    }
+
+    ol {
+      width: 55%;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      margin: 20px 0;
+      position: relative;
+      left: 20px;
+
+      li ol {
+        margin: 0;
+      }
+    }
   }
 }
