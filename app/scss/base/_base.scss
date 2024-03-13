@@ -17,15 +17,16 @@ body {
   display: grid;
   grid-template:
   "  header  " 112px
-  "  ......  " 10px
+  "  sidebar " auto
+  "  ......  " 20px
   "   main   " 1fr
   "  ......  " 100px
   "  footer  " auto;
 
-  @include mq(xl) {
+  @include mq(md) {
     grid-template:
     "  header  header  header  " 112px
-    "  ......  ......  ......  " 10px
+    "  ......  ......  ......  " 30px
     "  ......  sidebar  main   " 1fr
     "  ......  ......  ......  " 100px
     "  footer  footer  footer  " auto
@@ -43,7 +44,6 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  display: none;
 }
 
 .main {

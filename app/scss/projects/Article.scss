@@ -18,16 +18,6 @@
       display: none;
     }
 
-    @include mq(sm) {
-      width: 100%;
-      transform: translate(0%, 0%);
-    }
-
-    @include mq(xxl) {
-      width: 80%;
-      transform: translate(10%, 0%);
-    }
-
     &__item {
       position: relative;
 
@@ -45,16 +35,6 @@
         margin: 20px 30px;
         transition: all 0.5s;
 
-        @include mq(xl) {
-          width: 268.8px;
-          height: 245px;
-        }
-
-        @include mq(xxl) {
-          width: 384px;
-          height: 350px;
-        }
-
         &:hover {
           cursor: pointer;
           box-shadow: 10px 15px 15px #00000080;
@@ -68,16 +48,6 @@
           height: 216px;
           border-radius: 25px 25px 0 0;
           opacity: 1;
-
-          @include mq(xl) {
-            width: 268.8px;
-            height: auto;
-          }
-
-          @include mq(xxl) {
-            width: 384px;
-            height: 216px;
-          }
         }
 
         &__tag {
@@ -90,14 +60,6 @@
           background-color: #555;
           border-radius: 20px;
           padding: 8px 10px;
-
-          @include mq(xl) {
-            font-size: 12px;
-          }
-
-          @include mq(xxl) {
-            font-size: 13px;
-          }
         }
 
         &__text {
@@ -113,16 +75,6 @@
             font-weight: bold;
             position: relative;
             top: 5px;
-
-            @include mq(xl) {
-              width: 248.8px;
-              font-size: 16px;
-            }
-
-            @include mq(xxl) {
-              width: 364px;
-              font-size: 18px;
-            }
           }
 
           &__description {
@@ -132,15 +84,6 @@
             font-size: 14px;
             position: relative;
             top: 28px;
-
-            @include mq(xl) {
-              display: none;
-            }
-
-            @include mq(xxl) {
-              display: block;
-              width: 364px;
-            }
           }
 
           &__date {
@@ -153,25 +96,10 @@
             margin: 50px 0;
             font-weight: bold;
 
-            @include mq(xl) {
-              bottom: -2px;
-              font-size: 11px;
-            }
-
-            @include mq(xxl) {
-              bottom: 10px;
-              font-size: 12px;
-            }
-
-
             &__Published {
               margin-right: 20px;
               &::before {
                 content: "投稿日 : ";
-              }
-
-              @include mq(xxl) {
-                margin-right: 20px;
               }
             }
 
@@ -179,10 +107,6 @@
               margin-left: 20px;
               &::before {
                 content: "更新日 : ";
-              }
-
-              @include mq(xxl) {
-                margin-left: 20px;
               }
             }
           }
