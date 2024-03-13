@@ -48,7 +48,6 @@ export default async function ArticlePost({ params }: { params: { slug: string }
   // 前後の記事へのリンク先を取得
   const postsDirectory = path.join(process.cwd(), 'content');
   const fileNames = fs.readdirSync(postsDirectory);
-  const currentPostIndex = fileNames.findIndex((fileName) => fileName.replace('.md', '') === slug);
 
   // 記事を日付でソート
   const sortedPosts = fileNames
@@ -64,20 +63,29 @@ export default async function ArticlePost({ params }: { params: { slug: string }
   const previousPostSlug = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1].slug : null;
   const nextPostSlug = currentIndex > 0 ? sortedPosts[currentIndex - 1].slug : null;
 
-  // 記事のヘッドラインを取得
+  // 前後の記事のヘッドラインを取得
   const previousPostHeadline = previousPostSlug ? sortedPosts[currentIndex + 1].headline : null;
   const nextPostHeadline = nextPostSlug ? sortedPosts[currentIndex - 1].headline : null;
 
   return (
     <>
       <div className='Contents'>
+        {/* タイトル */}
         <h1 className='Contents__Title'>{headline}</h1>
+
+        {/* 投稿日＆更新日 */}
         <div className='Contents__Date'>
           <p className='Contents__Date__Published'>{Published}</p>
           <p className='Contents__Date__Updated'>{Updated}</p>
         </div>
+
+        {/* 説明文 */}
         <p className='Contents__Description'>{description}</p>
+
+        {/* Markdown要素 */}
         <div className='Contents__Content' dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
+
+        {/* 前後の記事へのリンク */}
         <div className='Contents__Link'>
           {previousPostSlug && (
             <Link href={`/article/${previousPostSlug}`} className='Contents__Link__Previous'>

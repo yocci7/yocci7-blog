@@ -9,6 +9,10 @@ const IndexHead = () => {
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <meta name="format-detection" content="email=no,telephone=no,address=no" />
       <meta name="msapplication-TileColor" content="#eec968"/>
+      <script
+        async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7672438019900336"
+        crossOrigin="anonymous">
+      </script>
       {/* OGP
       <meta property="og:url" content="ページのURL" />
       <meta property="og:title" content="ページのタイトル" />
