@@ -44,3 +44,4 @@ next-env.d.ts
 
 # Application-specific images
 app/Img
+public/Imgs/content

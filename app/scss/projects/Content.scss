@@ -145,7 +145,7 @@
       font-size: 28px;
       font-weight: 700;
       line-height: 40px;
-      margin: 30px 0 0 0;
+      margin: 30px 0;
       position:relative;
 
       &::before{
@@ -165,7 +165,7 @@
       font-size: 26px;
       font-weight: 600;
       line-height: 36px;
-      margin: 30px 0 0 0;
+      margin: 30px 0;
       position: relative;
 
       &::before{
@@ -186,7 +186,7 @@
       font-size: 24px;
       font-weight: 600;
       line-height: 32px;
-      margin: 20px 0 0 0;
+      margin: 20px 0;
       position: relative;
 
       &::before{
@@ -207,7 +207,7 @@
       font-size: 22px;
       font-weight: 400;
       line-height: 28px;
-      margin: 20px 0 0 0;
+      margin: 20px 0;
     }
 
     h5 {
@@ -215,7 +215,7 @@
       font-size: 20px;
       font-weight: 400;
       line-height: 24px;
-      margin: 20px 0 0 0;
+      margin: 20px 0;
     }
 
     h6 {
@@ -223,7 +223,7 @@
       font-size: 18px;
       font-weight: 400;
       line-height: 20px;
-      margin: 20px 0 0 0;
+      margin: 20px 0;
     }
 
     p {
@@ -270,7 +270,7 @@
     hr {
       width: 55%;
       height: 2px;
-      margin: 20px 0 0 0;
+      margin: 20px 0;
       background: #666;
       position: relative;
     }
@@ -341,7 +341,7 @@
     p {
       code {
         width: 55%;
-        margin: 20px 0 0 0;
+        margin: 20px 0;
         padding: 5px 8px;
         border-radius: 10px;
         background-color: #1d2020;
@@ -350,7 +350,7 @@
 
     pre {
       width: 55%;
-      margin: 20px 0 0 0;
+      margin: 20px 0;
       padding: 10px 16px 0;
       border-radius: 10px;
       background-color: #1d2020;

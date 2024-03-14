@@ -16,8 +16,11 @@ const generateMetadataForArticle = async ({ params }: Props): Promise<Metadata> 
   const headline = data.headline;
   const description = data.description;
 
+  // ' | YOCCI_ii7 BLOG' を追加してタイトルを生成
+  const title = `${headline} - YOCCI_ii7 BLOG`;
+
   return {
-    title: headline,
+    title: title,
     description: description,
   };
 };

@@ -13,7 +13,8 @@ const Footer = () => {
         </Link>
         <nav className='footer__nav'>
           <Link href="/contact" className='footer__nav__contact'>お問い合わせ</Link>
-          <Link href="/about" className='footer__nav__site'>サイトについて</Link>
+          <Link href="/about" className='footer__nav__about'>サイトについて</Link>
+          <Link href="/privacyPolicy" className='footer__nav__privacyPolicy'>プライバシーポリシー</Link>
         </nav>
         <p className='footer__licence'>© 2024 Yocci_ii7 BLOG / よっしーブログ</p>
       </footer>

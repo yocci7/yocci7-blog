@@ -1,5 +1,4 @@
 @use "../var/var" as *;
-
 .header {
   width: 100%;
   text-align: center;
@@ -17,6 +16,7 @@
       height: 42px;
     }
   }
+
   &__nav {
     padding: 20px 0;
     font-size: 16px;
@@ -41,9 +41,9 @@
           top: 120%;
           transform: translateX(0%);
           width: 0;
-          height: 2px;
+          height: 1.5px;
           background: #000;
-          transition: all 0.3s ease 0s;
+          transition: all .3s ease 0s;
         }
 
         &:hover {

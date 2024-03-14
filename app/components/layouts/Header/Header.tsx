@@ -50,6 +50,9 @@ const Header = () => {
           <li className='header__nav__item'>
             <Link href="/other">Other</Link>
           </li>
+          <li className='header__nav__item'>
+            <Link href="/aboutme">AboutMe</Link>
+          </li>
         </ul>
         </header>
     </>

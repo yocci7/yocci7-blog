@@ -4,7 +4,7 @@ import "@/public/Styles/Contact.css"
 const Contact = () => {
   return (
     <>
-      <h1>Hello About Page</h1>
+      <h1>Hello About</h1>
     </>
   )
 }
