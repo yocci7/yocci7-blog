@@ -5,7 +5,6 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faThumbtack } from "@fortawesome/free-solid-svg-icons";
 
 export default async function Sidebar() {

@@ -1,15 +1,10 @@
-// __  ______  ________________     _ _ _____   ____  __    ____  ______
-// \ \/ / __ \/ ____/ ____/  _/    (_|_)__  /  / __ )/ /   / __ \/ ____/
-//  \  / / / / /   / /    / /     / / /  / /  / __  / /   / / / / / __
-//  / / /_/ / /___/ /____/ /     / / /  / /  / /_/ / /___/ /_/ / /_/ /
-// /_/\____/\____/\____/___/____/_/_/  /_/  /_____/_____/\____/\____/
-//                        /_____/
-import React, { useState } from 'react';
+import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import "@/public/Styles/Article.css";
 import type { Metadata } from "next";
+import * as layouts from "@/app/components/layouts/Index"
 import * as elements from "@/app/components/elements/Index"
 
 export const metadata: Metadata = {

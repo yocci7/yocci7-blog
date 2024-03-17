@@ -37,10 +37,7 @@ const ArticleReturn: React.FC<ArticleReturnProps> = ({ posts }) => {
                   }
                 </p>
                 <p className="summary__article__item__section__text__description">
-                  {post.frontmatter.description.length > 50
-                    ? `${post.frontmatter.description.slice(0, 50)}...`
-                    : post.frontmatter.description
-                  }
+                  {post.frontmatter.description}
                 </p>
                 <div className='summary__article__item__section__text__date'>
                   <p className="summary__article__item__section__text__date__Published">
