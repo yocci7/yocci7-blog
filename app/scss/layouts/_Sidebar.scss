@@ -1,47 +1,36 @@
 @use "../var/var" as *;
 .sidebar {
-  flex: 1 1 20%;
-  min-width: 350px;
+  min-width: 296px;
+  position: sticky;
+  top: 142px;
 
   &__search {
-    margin: 0 15px;
-    display: flex;
-    position: fixed;
-    top: 160px;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    background-color: #ecd69c;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0px #c29523;
+    transition: .3s;
 
-    &__input {
-      width: 100%;
-      height: 50px;
-      font-size: 20px;
-      background-color: #ecd69c;
-      text-align: center;
-      border-radius: 20px;
-      box-shadow: 3px 3px 0px #c29523;
+    &:hover {
+      box-shadow: 5px 5px 0px #c29523;
       transition: .3s;
-
-      &::-webkit-search-cancel-button {
-        -webkit-appearance: none;
-      }
-
-      &:hover {
-        box-shadow: 5px 5px 0px #c29523;
-        transition: .3s;
-      }
     }
   }
 
   .recentArticle {
-    margin-top: 10px;
-    position: fixed;
-    top:  230px;
-    width: 296px;
+    width: 100%;
     height: 360px;
+    margin-top: 25px;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 5px 5px 15px #00000080;
     transition: all 0.3s;
 
     &__title {
+      width: 100%;
       background-color: #ecdcb2;
       color: #c29523;
       font-size: 25px;
@@ -49,7 +38,6 @@
       text-align: center;
       letter-spacing: 1px;
       border-radius: 20px 20px 0  0;
-      width: 296px;
     }
 
     & .fa-thumbtack {

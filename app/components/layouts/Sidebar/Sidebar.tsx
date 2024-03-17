@@ -39,41 +39,41 @@ export default async function Sidebar() {
 
   return (
     <>
-      <div className="sidebar">
-        <div className="sidebar__search">
-          <input type="text" placeholder="Search" className="sidebar__search__input" />
-        </div>
+      <div className="sidebarWrap">
+        <div className="sidebar">
+            <input type="text" placeholder="Search" className="sidebar__search" />
 
-        <div className="recentArticle">
-          <h4 className="recentArticle__title">
-            <FontAwesomeIcon icon={faThumbtack}　width={15} height={20} />
-            Recent Article
-          </h4>
+          <div className="recentArticle">
+            <h4 className="recentArticle__title">
+              <FontAwesomeIcon icon={faThumbtack}　width={15} height={20} />
+              Recent Article
+            </h4>
 
-          {posts.map((post) => (
-            <div key={post.slug} className="recentArticle__item">
-              <Link href={`/article/${post.slug}`}>
-                <section className="recentArticle__item__section">
-                  <Image
-                    src={post.frontmatter.img}
-                    width={256}
-                    height={144}
-                    className="recentArticle__item__section__img"
-                    alt="No Image"
-                    // priority=""
-                  />
-                  <div className="recentArticle__item__section__text">
-                    <h4 className="recentArticle__item__section__text__headline">
-                    {post.frontmatter.headline.length > 47
-                        ? `${post.frontmatter.headline.slice(0, 47)}...`
-                        : post.frontmatter.headline
-                    }
-                    </h4>
-                  </div>
-                </section>
-              </Link>
-            </div>
-          ))}
+            {posts.map((post) => (
+              <div key={post.slug} className="recentArticle__item">
+                <Link href={`/article/${post.slug}`}>
+                  <section className="recentArticle__item__section">
+                    <Image
+                      src={post.frontmatter.img}
+                      width={256}
+                      height={144}
+                      className="recentArticle__item__section__img"
+                      alt="No Image"
+                      // priority=""
+                    />
+                    <div className="recentArticle__item__section__text">
+                      <h4 className="recentArticle__item__section__text__headline">
+                      {post.frontmatter.headline.length > 47
+                          ? `${post.frontmatter.headline.slice(0, 47)}...`
+                          : post.frontmatter.headline
+                      }
+                      </h4>
+                    </div>
+                  </section>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
