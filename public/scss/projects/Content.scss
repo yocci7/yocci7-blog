@@ -145,7 +145,7 @@
       font-size: 28px;
       font-weight: 700;
       line-height: 40px;
-      margin: 30px 0;
+      margin: 50px 0;
       position:relative;
 
       &::before{
@@ -157,6 +157,7 @@
         top: 0px;
         background-color: #f09c00;
         position: absolute;
+        border-radius: 50px;
       }
     }
 
@@ -165,7 +166,7 @@
       font-size: 26px;
       font-weight: 600;
       line-height: 36px;
-      margin: 30px 0;
+      margin: 40px 0;
       position: relative;
 
       &::before{
@@ -178,6 +179,7 @@
         background-color: #ffad14;
         position: absolute;
         bottom: 0px;
+        border-radius: 50px;
       }
     }
 
@@ -186,7 +188,7 @@
       font-size: 24px;
       font-weight: 600;
       line-height: 32px;
-      margin: 20px 0;
+      margin: 30px 0;
       position: relative;
 
       &::before{
@@ -199,6 +201,7 @@
         background-color: #ffb833;
         position: absolute;
         bottom: 0px;
+        border-radius: 50px;
       }
     }
 
