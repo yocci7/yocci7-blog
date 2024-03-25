@@ -1,11 +1,13 @@
 @use "../var/var" as *;
+@use "../var/mixin" as *;
 .sidebar {
   min-width: 296px;
   position: sticky;
   top: 142px;
 
   &__search {
-    width: 100%;
+    margin: 0 25%;
+    width: 50%;
     height: 50px;
     font-size: 20px;
     background-color: #ecd69c;
@@ -13,6 +15,11 @@
     border-radius: 20px;
     box-shadow: 3px 3px 0px #c29523;
     transition: .3s;
+
+    @include mq(md) {
+      margin: 0;
+      width: 100%;
+    }
 
     &:hover {
       box-shadow: 5px 5px 0px #c29523;
@@ -28,6 +35,11 @@
     border-radius: 20px;
     box-shadow: 5px 5px 15px #00000080;
     transition: all 0.3s;
+    display: none;
+
+    @include mq(md) {
+      display: block;
+    }
 
     &__title {
       width: 100%;

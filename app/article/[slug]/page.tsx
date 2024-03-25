@@ -82,6 +82,8 @@ export default async function ArticlePost({ params }: { params: { slug: string }
         {/* 説明文 */}
         <p className='Contents__Description'>{description}</p>
 
+        <nav className="toc" />
+
         {/* Markdown要素 */}
         <div className='Contents__Content' dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
 
@@ -89,7 +91,7 @@ export default async function ArticlePost({ params }: { params: { slug: string }
         <div className='Contents__Link'>
           {previousPostSlug && (
             <Link href={`/article/${previousPostSlug}`} className='Contents__Link__Previous'>
-              前の記事 :
+              前の記事
               <p className='Contents__Link__Previous__headline'>
                 {previousPostHeadline.length > 53
                   ? `${previousPostHeadline.slice(0, 53)}...`
@@ -100,7 +102,7 @@ export default async function ArticlePost({ params }: { params: { slug: string }
           )}
           {nextPostSlug && (
             <Link href={`/article/${nextPostSlug}`} className='Contents__Link__Next'>
-              次の記事 :
+              次の記事
               <p className='Contents__Link__Next__headline'>
                 {nextPostHeadline.length > 53
                   ? `${nextPostHeadline.slice(0, 53)}...`

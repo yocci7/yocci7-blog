@@ -22,8 +22,8 @@ const ArticleReturn: React.FC<ArticleReturnProps> = ({ posts }) => {
             <section className='summary__article__item__section'>
               <Image
                 src={post.frontmatter.img}
-                width={384}
-                height={216}
+                width={460}
+                height={270}
                 className='summary__article__item__section__img'
                 alt='No Image'
                 priority

@@ -26,12 +26,12 @@ body {
 
   @include mq(md) {
     grid-template:
-    "  header  header  header  " 112px
-    "  ......  ......  ......  " 30px
-    "  ......  sidebar  main   " 1fr
-    "  ......  ......  ......  " 100px
-    "  footer  footer  footer  " auto
-    /    3%     296px     1fr   ;
+    "   header  header  header " 112px
+    "   ......  ......  ...... " 30px
+    "    main   sidebar ...... " auto
+    "   ......  ......  ...... " 100px
+    "   footer  footer  footer " auto
+    /    1fr     296px    5%     ;
   }
 }
 
